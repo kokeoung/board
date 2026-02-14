@@ -3,5 +3,13 @@ spring:
     name: board
   datasource:
     url: jdbc:mysql://localhost:3306/board?serverTimezone=Asia/Seoul
-    username: root
-    password: root
+    username: admin
+    password: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update # 엔티티 <-> 테이블 싱크 맞추기
+      show-sql: true  # sql 로그에서 보기
+      properties:
+        hibernate:
+          format-sql: true
